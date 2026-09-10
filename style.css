@@ -1,7 +1,7 @@
 body {
         margin: 0;
         min-height: 100vh;
-        background: #f5f6f8;
+        background: red;
         font-family: Arial, sans-serif;
         display: flex;
         flex-direction: column;
