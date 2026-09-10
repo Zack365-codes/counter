@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <input type="number" placeholder="Enter amount" id="inp" />
+    <button id="btn">Submit</button>
+
+    <h2 id="res-5000"></h2>
+    <h2 id="rem-5000"></h2>
+
+    <h2 id="res-1000"></h2>
+    <h2 id="rem-1000"></h2>
+
+    <h2 id="res-500"></h2>
+    <h2 id="rem-500"></h2>
+
+    <h2 id="res-100"></h2>
+    <h2 id="rem-100"></h2>
+
+    <h2 id="res-50"></h2>
+    <h2 id="rem-50"></h2>
+
+    <h2 id="res-10"></h2>
+    <h2 id="rem-10"></h2>
+
+    <h2 id="res-5"></h2>
+    <h2 id="rem-5"></h2>
+
+    <h2 id="res-2"></h2>
+    <h2 id="rem-2"></h2>
+
+    <h2 id="res-1"></h2>
+    <h2 id="rem-1"></h2>
+
+    <h2 id="res-remaining"></h2>
+
+    <script>
+      let inp = document.querySelector("#inp");
+      let btn = document.querySelector("#btn");
+      btn.addEventListener("click", () => {
+        let amount = inp.value;
+
+        // Calculation of counter system
+
+        //  ============== 5k =================
+        let amount5k = Math.floor(amount / 5000);
+        let remaining5k = amount % 5000;
+
+        //    =========== 1k ================
+        let amount1k = Math.floor(remaining5k / 1000);
+        let remaining1k = remaining5k % 1000;
+
+        //  =============== 500 ==============
+        let amount5h = Math.floor(remaining1k / 500);
+        let remaining5h = remaining1k % 500;
+
+        //   =============== 100 =============
+        let amount1h = Math.floor(remaining5h / 100);
+        let remaining1h = remaining5h % 100;
+
+        let amount50 = Math.floor(remaining1h / 50);
+        let remaining50 = remaining1h % 50;
+
+        let amount10 = Math.floor(remaining50 / 10);
+        let remaining10 = remaining50 % 10;
+
+        let amount5 = Math.floor(remaining10 / 5);
+        let remaining5 = remaining10 % 5;
+
+        let amount2 = Math.floor(remaining5 / 2);
+        let remaining2 = remaining5 % 2;
+
+        let amount1 = Math.floor(remaining2 / 1);
+        let remaining1 = remaining2 % 1;
+
+        // Displaying resluts
+        //  ============= 5k =================
+        let res5000 = document.querySelector("#res-5000");
+        let rem5000 = document.querySelector("#rem-5000");
+
+        //  ============== 1k ==================
+        let res1000 = document.querySelector("#res-1000");
+        let rem1000 = document.querySelector("#rem-1000");
+
+        //  ============= 5h ==================
+        let res500 = document.querySelector("#res-500");
+        let rem500 = document.querySelector("#rem-500");
+
+        //  ============== 1h ==================
+        let res100 = document.querySelector("#res-100");
+        let rem100 = document.querySelector("#rem-100");
+
+        //  =============== 50 ==================
+        let res50 = document.querySelector("#res-50");
+        let rem50 = document.querySelector("#rem-50");
+
+        //  =============== 10 ====================
+        let res10 = document.querySelector("#res-10");
+        let rem10 = document.querySelector("#rem-10");
+
+        //  ================ 5 ===================
+        let res5 = document.querySelector("#res-5");
+        let rem5 = document.querySelector("#rem-5");
+
+        //  =============== 2 ===================
+        let res2 = document.querySelector("#res-2");
+        let rem2 = document.querySelector("#rem-2");
+
+        //  =============== 1 =================
+        let res1 = document.querySelector("#res-1");
+        let rem1 = document.querySelector("#rem-1");
+
+        let resRemaining = document.querySelector("#res-remaining");
+
+        res5000.textContent = "5000 : " + amount5k;
+        rem5000.textContent = "Remaining " + remaining5k;
+
+        res1000.textContent = "1000 : " + amount1k;
+        rem1000.textContent = "Remaining " + remaining1k;
+
+        res500.textContent = "500 : " + amount5h;
+        rem500.textContent = "Remaining : " + remaining5h;
+
+        res100.textContent = "100 : " + amount1h;
+        rem100.textContent = "Remaining : " + remaining1h;
+
+        res50.textContent = "50 : " + amount50;
+        rem50.textContent = "Remaining : " + remaining50;
+
+        res10.textContent = "10 : " + amount10;
+        rem10.textContent = "Remaining : " + remaining10;
+
+        res5.textContent = "5 : " + amount5;
+        rem5.textContent = "Remaining : " + remaining5;
+
+        res2.textContent = "2 : " + amount2;
+        rem2.textContent = "Remaining : " + remaining2;
+
+        res1.textContent = "1 : " + amount1;
+        rem1.textContent = "Remaining : " + remaining1;
+      });
+    </script>
+  </body>
+</html>
