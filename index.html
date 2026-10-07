@@ -3,61 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>counter</title>
+    <title>Cash Denomination Counter</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <input type="number" placeholder="Enter amount" id="inp" />
-    <button id="btn">Submit</button>
+    <div class="container">
+      <header>
+        <h1>Cash Denomination Counter</h1>
+        <p>Enter the total amount to calculate currency breakdown</p>
+      </header>
 
-    <div class="results">
-      <div class="card">
-        <h2 id="res-5000"></h2>
-        <h2 id="rem-5000"></h2>
+      <div class="input-section">
+        <input type="number" placeholder="Enter amount" id="inp" />
+        <button id="btn">Calculate Breakdown</button>
       </div>
 
-      <div class="card">
-        <h2 id="res-1000"></h2>
-        <h2 id="rem-1000"></h2>
-      </div>
+      <div class="results">
+        <div class="card">
+          <h2 id="res-5000"></h2>
+          <h2 id="rem-5000"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-500"></h2>
-        <h2 id="rem-500"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-1000"></h2>
+          <h2 id="rem-1000"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-100"></h2>
-        <h2 id="rem-100"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-500"></h2>
+          <h2 id="rem-500"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-50"></h2>
-        <h2 id="rem-50"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-100"></h2>
+          <h2 id="rem-100"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-10"></h2>
-        <h2 id="rem-10"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-50"></h2>
+          <h2 id="rem-50"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-5"></h2>
-        <h2 id="rem-5"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-10"></h2>
+          <h2 id="rem-10"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-2"></h2>
-        <h2 id="rem-2"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-5"></h2>
+          <h2 id="rem-5"></h2>
+        </div>
 
-      <div class="card">
-        <h2 id="res-1"></h2>
-        <h2 id="rem-1"></h2>
-      </div>
+        <div class="card">
+          <h2 id="res-2"></h2>
+          <h2 id="rem-2"></h2>
+        </div>
 
-      <h2 id="res-remaining"></h2>
+        <div class="card">
+          <h2 id="res-1"></h2>
+          <h2 id="rem-1"></h2>
+        </div>
+
+        <h2 id="res-remaining"></h2>
+      </div>
     </div>
+
     <script>
       let inp = document.querySelector("#inp");
       let btn = document.querySelector("#btn");
@@ -70,11 +80,11 @@
         let amount5k = Math.floor(amount / 5000);
         let remaining5k = amount % 5000;
 
-        //    =========== 1k ================
+        //   =========== 1k ================
         let amount1k = Math.floor(remaining5k / 1000);
         let remaining1k = remaining5k % 1000;
 
-        //  =============== 500 ==============
+        //   =============== 500 ==============
         let amount5h = Math.floor(remaining1k / 500);
         let remaining5h = remaining1k % 500;
 
@@ -97,7 +107,7 @@
         let amount1 = Math.floor(remaining2 / 1);
         let remaining1 = remaining2 % 1;
 
-        // Displaying resluts
+        // Displaying results
         //  ============= 5k =================
         let res5000 = document.querySelector("#res-5000");
         let rem5000 = document.querySelector("#rem-5000");
